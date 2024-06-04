@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Description: Flash timestamping FPGA image
+
+case "$1" in
+    start)
+        echo "Flashing FPGA with timestamping image."
+        /lib/firmware/flash.sh
+        ;;
+    stop)
+        # Add any cleanup steps here if needed
+        ;;
+    restart|reload)
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reload}"
+        exit 1
+        ;;
+esac
+
+exit 0
